@@ -35,6 +35,7 @@ class Main {
     public static void pauseForInput(boolean pause){
         if (pause){
             Scanner sc = new Scanner(System.in);
+            System.out.println("Press enter until the message appears");
             String pauseForInput = sc.nextLine();
         }
     }
