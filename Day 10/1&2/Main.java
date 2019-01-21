@@ -3,10 +3,10 @@ import java.util.*;
 
 class Main {
     public static void main(String[] args) throws Exception{
-        String[] vectors = readFileAsArray("./input.txt");   
-        Point[] points = processInput(vectors);
+        Point[] points = processInput(readFileAsArray("./input.txt"));
         Grid grid;
         boolean pause = false;
+        int count = 0;
 
         while(true){
             try{
@@ -20,8 +20,11 @@ class Main {
             }
 
             points = advancePoints(points);
+            System.out.println(count);
+            count++;
             pauseForInput(pause);
         }
+
     }
 
     public static Point[] advancePoints(Point[] points){
